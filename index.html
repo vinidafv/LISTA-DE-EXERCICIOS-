@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Exercícios - HTML, CSS e JS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #dbeafe, #c7d2fe);
+      color: #1e293b;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: 2em;
+      color: #1e3a8a;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .exercicio {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 550px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .exercicio:hover {
+      transform: scale(1.02);
+    }
+
+    .exercicio h2 {
+      color: #3b82f6;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 5px;
+      margin-bottom: 12px;
+      font-size: 1.2em;
+    }
+
+    input {
+      padding: 8px;
+      margin: 5px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 15px;
+      width: 70%;
+      max-width: 230px;
+      transition: border 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    }
+
+    button {
+      margin-top: 10px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 15px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #1e40af, #1d4ed8);
+      transform: scale(1.05);
+    }
+
+    #resultado1, #resultado2, #resultado3, #resultado4, #resultado5 {
+      margin-top: 10px;
+      font-weight: 500;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista de Exercícios - Programação</h1>
+
+  <section class="exercicio">
+    <h2>1. Tabuada</h2>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="gerarTabuada()">Gerar</button>
+    <div id="resultado1"></div>
+  </section>
+
+  <section class="exercicio">
+    <h2>2. Positivo, Negativo ou Nulo</h2>
+    <input type="number" id="valor" placeholder="Digite um número">
+    <button onclick="verificarNumero()">Verificar</button>
+    <div id="resultado2"></div>
+  </section>
+
+  <section class="exercicio">
+    <h2>3. É Primo?</h2>
+    <input type="number" id="numeroPrimo" placeholder="Digite um número inteiro">
+    <button onclick="verificarPrimo()">Verificar</button>
+    <div id="resultado3"></div>
+  </section>
+
+  <section class="exercicio">
+    <h2>4. Medalhas</h2>
+    <input type="number" id="t1" placeholder="Tempo Nadador 1">
+    <input type="number" id="t2" placeholder="Tempo Nadador 2">
+    <input type="number" id="t3" placeholder="Tempo Nadador 3">
+    <button onclick="verificarMedalhas()">Verificar</button>
+    <div id="resultado4"></div>
+  </section>
+
+  <section class="exercicio">
+    <h2>5. Idade de Dona Mônica</h2>
+    <input type="number" id="idadeMonica" placeholder="Idade da Mônica">
+    <input type="number" id="idadeFilho1" placeholder="Filho 1">
+    <input type="number" id="idadeFilho2" placeholder="Filho 2">
+    <button onclick="calcularFilhoMaisVelho()">Calcular</button>
+    <div id="resultado5"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
